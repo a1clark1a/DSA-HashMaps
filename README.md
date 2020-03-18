@@ -22,7 +22,8 @@ Exercises
 
 What is the output of the following code? explain your answer.
 
-```const WhatDoesThisDo = function(){
+```
+const WhatDoesThisDo = function(){
    let str1 = 'Hello World.';
    let str2 = 'Hello World.';
    let map1 = new HashMap();
