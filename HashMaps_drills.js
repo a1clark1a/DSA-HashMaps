@@ -1,13 +1,13 @@
-const HashMap_OA = require("./HashMap-OA");
+const HashMap = require("./HashMap");
 
 function main() {
-  const lotr = new HashMap_OA();
+  const lotr = new HashMap();
   lotr.MAX_LOAD_RATIO = 0.5;
   lotr.SIZE_RATIO = 3;
 
   const names = [
     { Hobbit: "Bilbo" },
-    { Hobbit: "Frod" },
+    { Hobbit: "Frodo" },
     { Wizard: "Gandolf" },
     { Human: "Aragorn" },
     { Elf: "Legolas" },
@@ -19,7 +19,19 @@ function main() {
     { Ent: "Treebeard" }
   ];
 
+  names.forEach(name => {
+    key = Object.keys(name).toString();
+    value = Object.values(name).toString();
+    lotr.set(key, value);
+  });
+
+  lotr.set("Dragon", "Smaug");
   console.log(lotr);
+
+  //Retreiving "Maiar"
+  console.log(lotr.get("Maiar"));
+
+  console.log(lotr.get("Hobbit"));
 }
 
 main();
